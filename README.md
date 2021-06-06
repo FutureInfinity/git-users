@@ -22,7 +22,7 @@ $ npm install -g git-users
 $ gu COMMAND
 running command...
 $ gu (-v|--version|version)
-git-users/0.0.1 win32-x64 node-v16.3.0
+git-users/0.2.0 win32-x64 node-v16.3.0
 $ gu --help [COMMAND]
 USAGE
   $ gu COMMAND
@@ -73,7 +73,7 @@ EXAMPLES
   User JhonDoe Added Successfully!
 ```
 
-_See code: [src/commands/add.ts](https://github.com/mrhyperbit/git-users/blob/v0.0.1/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/mrhyperbit/git-users/blob/v0.2.0/src/commands/add.ts)_
 
 ## `gu delete [NAME]`
 
@@ -99,7 +99,7 @@ EXAMPLES
   User JhonDoe Deleted Successfully!
 ```
 
-_See code: [src/commands/delete.ts](https://github.com/mrhyperbit/git-users/blob/v0.0.1/src/commands/delete.ts)_
+_See code: [src/commands/delete.ts](https://github.com/mrhyperbit/git-users/blob/v0.2.0/src/commands/delete.ts)_
 
 ## `gu help [COMMAND]`
 
@@ -143,7 +143,7 @@ EXAMPLES
   User JhonDoe Set Locally!
 ```
 
-_See code: [src/commands/user.ts](https://github.com/mrhyperbit/git-users/blob/v0.0.1/src/commands/user.ts)_
+_See code: [src/commands/user.ts](https://github.com/mrhyperbit/git-users/blob/v0.2.0/src/commands/user.ts)_
 <!-- commandsstop -->
 * [`gu add [NAME] [EMAIL]`](#gu-add-name-email)
 * [`gu delete [NAME]`](#gu-delete-name)

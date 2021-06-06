@@ -1,3 +1,3 @@
 @echo off
 
-node --trace-warnings "%~dp0\run" %*
+node "%~dp0\run" %*

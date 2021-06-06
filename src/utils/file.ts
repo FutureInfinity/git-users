@@ -9,7 +9,7 @@ export function createPath(dir: string) {
   return false
 }
 
-export function isGitInit() {
+export function isGitInit(): boolean {
   if (fs.existsSync('.git')) {
     return true
   }

@@ -39,12 +39,13 @@ User JhonDoe Set Locally!
           const email = await execa('git', ['config', '--local', 'user.email'])
           this.log(stdout + ' ' + email.stdout)
           return
-        } catch (error: any) {
-          if (error.stderr) {
-            this.error(error.stderr)
+        } catch (error) {
+          /* if (error) {
+            this.error(error)
             return
           }
-          this.warn('Current Local User Is Not Set')
+          this.warn('Current Local User Is Not Set') */
+          console.log(error)
         }
       } else {
         this.error('git not init!')

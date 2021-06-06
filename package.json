@@ -68,7 +68,7 @@
     "execa": "github:sindresorhus/execa",
     "inquirer": "^6.5.2",
     "node-notifier": "^10.0.0",
-    "stormdb": "^0.4.1",
+    "stormdb": "github:HopzCreation/stormdb",
     "tslib": "^1.14.1"
   }
 }

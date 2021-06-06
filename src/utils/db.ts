@@ -1,9 +1,7 @@
-/* eslint-disable no-console */
 /* eslint-disable new-cap */
-/* eslint-disable object-curly-spacing */
 import StormDB = require('stormdb')
 import envPaths from 'env-paths'
-import { createPath } from './file'
+import {createPath} from './file'
 import * as notifier from 'node-notifier'
 
 // Types
@@ -17,7 +15,7 @@ export default class DB {
 
   constructor() {
     // eslint-disable-next-line eqeqeq
-    const DbFileLocation = envPaths('GitUsers', { suffix: '' }).data
+    const DbFileLocation = envPaths('GitUsers', {suffix: ''}).data
     // eslint-disable-next-line no-useless-escape
     createPath(DbFileLocation)
 
@@ -54,7 +52,6 @@ export default class DB {
     if (this.get(Username)) {
       this.stormdb.get(Username).delete('Test')
       this.stormdb.save()
-      console.log(this.stormdb.state)
       return true
     }
     notifier.notify({

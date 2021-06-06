@@ -138,6 +138,8 @@ EXAMPLES
   Current Local Git User Is JhonDoe!
 
   $ gu user
+        $ ? select a user (Use arrow keys)
+        $ > JhonDoe
   User JhonDoe Set Locally!
 ```
 

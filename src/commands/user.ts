@@ -1,9 +1,18 @@
+/* eslint-disable no-console */
 import {Command, flags} from '@oclif/command'
 import execa = require('execa')
 import DB from '../utils/db'
 import {isGitInit} from '../utils/file'
 import {selectUserList} from '../utils/cli'
+interface Error {
+  stderr: string;
+}
 
+function isError(err: any): err is Error {
+  return typeof err === 'object' &&
+  err !== null &&
+  'stderr' in err && typeof err.name === 'string'
+}
 export default class User extends Command {
   static description = 'Get or Set Local Git User'
 
@@ -38,13 +47,15 @@ User JhonDoe Set Locally!
           const email = await execa('git', ['config', '--local', 'user.email'])
           this.log(stdout + ' ' + email.stdout)
           return
-        } catch (error: any) {
-          if (error.stderr) {
-            this.error(error.stderr)
-            return
+        } catch (error) {
+          if (isError(error)) {
+            // eslint-disable-next-line max-depth
+            if (error.stderr) {
+              this.error(error.stderr)
+              return
+            }
           }
           this.warn('Current Local User Is Not Set')
-          // console.log(error)
         }
       } else {
         this.error('git not init!')

@@ -1,7 +1,7 @@
 {
   "name": "git-users",
   "description": "Multiple Git Users",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "HopzCreation @HopzCreation",
   "bin": {
     "gu": "./bin/run"

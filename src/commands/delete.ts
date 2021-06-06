@@ -1,9 +1,6 @@
-/* eslint-disable no-console */
-/* eslint-disable no-useless-escape */
-/* eslint-disable object-curly-spacing */
-import { Command, flags } from '@oclif/command'
+import {Command, flags} from '@oclif/command'
 import DB from '../utils/db'
-import { selectUserList } from '../utils/cli'
+import {selectUserList} from '../utils/cli'
 
 export default class Delete extends Command {
   static description = 'Delete User'
@@ -20,13 +17,13 @@ User JhonDoe Deleted Successfully!
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: flags.help({char: 'h'}),
   }
 
-  static args = [{ name: 'name', required: false, description: 'User Name, eg :- JhonDoe' }]
+  static args = [{name: 'name', required: false, description: 'User Name, eg :- JhonDoe'}]
 
   async run() {
-    const { args } = this.parse(Delete)
+    const {args} = this.parse(Delete)
 
     // trim and remove whitespaces
     let Username: string = args.name

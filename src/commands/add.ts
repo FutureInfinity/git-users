@@ -1,6 +1,5 @@
 /* eslint-disable no-useless-escape */
-/* eslint-disable object-curly-spacing */
-import { Command, flags } from '@oclif/command'
+import {Command, flags} from '@oclif/command'
 import DB from '../utils/db'
 import cli from 'cli-ux'
 
@@ -19,13 +18,13 @@ User JhonDoe Added Successfully!
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: flags.help({char: 'h'}),
   }
 
-  static args = [{ name: 'name', required: false, description: 'User Name, eg :- JhonDoe' }, { name: 'email', required: false, description: 'User Email, eg :- jhondoe@gmail.com' }]
+  static args = [{name: 'name', required: false, description: 'User Name, eg :- JhonDoe'}, {name: 'email', required: false, description: 'User Email, eg :- jhondoe@gmail.com'}]
 
   async run() {
-    const { args } = this.parse(Add)
+    const {args} = this.parse(Add)
 
     // trim and remove whitespaces
     let Username: string = args.name
@@ -45,7 +44,7 @@ User JhonDoe Added Successfully!
     // add user to json
     // console.log(this.config)
     const db = new DB()
-    if (db.add({ name: Username.replace(/\s+/g, ''), email: email })) {
+    if (db.add({name: Username.replace(/\s+/g, ''), email: email})) {
       this.log(`User ${Username} Added Successfully!`)
       return
     }

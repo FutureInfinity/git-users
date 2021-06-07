@@ -22,7 +22,7 @@ $ npm install -g git-users
 $ gu COMMAND
 running command...
 $ gu (-v|--version|version)
-git-users/0.2.0 win32-x64 node-v16.3.0
+git-users/0.2.0 linux-x64 node-v10.19.0
 $ gu --help [COMMAND]
 USAGE
   $ gu COMMAND
